@@ -1,0 +1,1 @@
+STM32 ADC Polling Example Pollforconversion is the easiest way to get the ADC values Here we will keep monitoring for the conversion in the blocking mode using HAL_ADC_PollForConversion Once the conversion is complete, we can read the value using HAL_ADC_GetValue And finally we will stop the ADC.
