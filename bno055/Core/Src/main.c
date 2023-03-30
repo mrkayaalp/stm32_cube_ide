@@ -95,6 +95,7 @@ int main(void)
   bno055_assignI2C(&hi2c1);
   bno055_setup();
   bno055_setOperationModeNDOF();
+  bno055_config();
 
   /* USER CODE END 2 */
 

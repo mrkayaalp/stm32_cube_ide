@@ -1,1 +1,5 @@
-../Core/Src/bno055_lib.c:6:6:read_bno055_data	32	static
+../Core/Src/bno055_lib.c:20:6:_setPage	16	static
+../Core/Src/bno055_lib.c:26:6:read_bno055_data	32	static
+../Core/Src/bno055_lib.c:34:6:bno055_i2c_write_data	32	static
+../Core/Src/bno055_lib.c:39:6:bno055_i2c_read_data	32	static
+../Core/Src/bno055_lib.c:44:6:bno055_config	16	static

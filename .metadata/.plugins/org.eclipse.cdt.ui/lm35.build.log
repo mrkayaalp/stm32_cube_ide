@@ -1,0 +1,55 @@
+01:50:08 **** Incremental Build of configuration Debug for project lm35 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -u _printf_float -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:108:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+  108 |     sprintf(buffer, "temp : %f \n", temp);
+      |     ^~~~~~~
+../Core/Src/main.c:108:5: warning: incompatible implicit declaration of built-in function 'sprintf'
+../Core/Src/main.c:24:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+   23 | #include "gpio.h"
+  +++ |+#include <stdio.h>
+   24 | 
+../Core/Src/main.c:109:40: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+  109 |     HAL_UART_Transmit(&huart2, buffer, strlen(buffer), 100);
+      |                                        ^~~~~~
+../Core/Src/main.c:109:40: warning: incompatible implicit declaration of built-in function 'strlen'
+../Core/Src/main.c:24:1: note: include '<string.h>' or provide a declaration of 'strlen'
+   23 | #include "gpio.h"
+  +++ |+#include <string.h>
+   24 | 
+../Core/Src/main.c:109:32: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  109 |     HAL_UART_Transmit(&huart2, buffer, strlen(buffer), 100);
+      |                                ^~~~~~
+      |                                |
+      |                                char *
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:406,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:108:29: warning: '%f' directive writing between 3 and 317 bytes into a region of size 3 [-Wformat-overflow=]
+  108 |     sprintf(buffer, "temp : %f \n", temp);
+      |                             ^~
+../Core/Src/main.c:108:21: note: assuming directive output of 8 bytes
+  108 |     sprintf(buffer, "temp : %f \n", temp);
+      |                     ^~~~~~~~~~~~~~
+../Core/Src/main.c:108:5: note: 'sprintf' output between 13 and 327 bytes into a destination of size 10
+  108 |     sprintf(buffer, "temp : %f \n", temp);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "lm35.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\lm35\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lm35.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lm35.elf
+ 
+arm-none-eabi-size   lm35.elf 
+arm-none-eabi-objdump -h -S  lm35.elf  > "lm35.list"
+   text	   data	    bss	    dec	    hex	filename
+  27064	    484	   1748	  29296	   7270	lm35.elf
+Finished building: default.size.stdout
+ 
+Finished building: lm35.list
+ 
+
+01:50:08 Build Finished. 0 errors, 6 warnings. (took 709ms)
+

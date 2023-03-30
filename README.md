@@ -1,1 +1,1 @@
-#stm32_cube_ide projects 
+Projects in #stm32_cube_ide for my development 
