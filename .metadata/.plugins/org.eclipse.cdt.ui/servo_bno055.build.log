@@ -1,0 +1,17 @@
+13:30:04 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12524	     20	   1708	  14252	   37ac	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
+ 
+
+13:30:05 Build Finished. 0 errors, 0 warnings. (took 718ms)
+

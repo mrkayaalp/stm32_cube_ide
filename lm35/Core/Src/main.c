@@ -107,6 +107,7 @@ int main(void)
     sprintf(buffer, "temp : %f \n", temp);
     HAL_UART_Transmit(&huart2, buffer, strlen(buffer), 100);
 
+
     HAL_Delay(100);
 
     /* USER CODE END WHILE */

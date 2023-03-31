@@ -1,72 +1,752 @@
-14:16:30 **** Incremental Build of configuration Debug for project bno055 ****
+17:35:26 **** Incremental Build of configuration Debug for project servo_bno055 ****
 make -j12 all 
-arm-none-eabi-size   bno055.elf 
-   text	   data	    bss	    dec	    hex	filename
-  23736	    120	   1784	  25640	   6428	bno055.elf
-Finished building: default.size.stdout
- 
-14:19:09 **** Incremental Build of configuration Debug for project bno055 ****
-make -j12 all 
-arm-none-eabi-size   bno055.elf 
-   text	   data	    bss	    dec	    hex	filename
-  23736	    120	   1784	  25640	   6428	bno055.elf
-Finished building: default.size.stdout
- 
-15:10:42 **** Incremental Build of configuration Debug for project bno055 ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/bno055_lib.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/bno055_lib.d" -MT"Core/Src/bno055_lib.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/bno055_lib.o"
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/bno055_lib.c: In function 'read_bno055_data':
-../Core/Src/bno055_lib.c:28:63: warning: passing argument 5 of 'HAL_I2C_Mem_Read' from incompatible pointer type [-Wincompatible-pointer-types]
-   28 |     HAL_I2C_Mem_Read(&hi2c1, BNO055_I2C_ADDR_LO << 1, reg, 1, &buffer, 6, 100);
-      |                                                               ^~~~~~~
-      |                                                               |
-      |                                                               uint8_t (*)[6] {aka unsigned char (*)[6]}
-In file included from ../Core/Inc/stm32f4xx_hal_conf.h:358,
-                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Inc/bno055_lib.h:3,
-                 from ../Core/Src/bno055_lib.c:1:
-../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h:571:133: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t (*)[6]' {aka 'unsigned char (*)[6]'}
-  571 | HAL_StatusTypeDef HAL_I2C_Mem_Read(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint16_t MemAddress, uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
-      |                                                                                                                            ~~~~~~~~~^~~~~
-arm-none-eabi-gcc -o "bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: bno055.elf
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
  
-arm-none-eabi-size   bno055.elf 
-arm-none-eabi-objdump -h -S  bno055.elf  > "bno055.list"
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
    text	   data	    bss	    dec	    hex	filename
-  23736	    120	   1784	  25640	   6428	bno055.elf
+  12652	     20	   1780	  14452	   3874	servo_bno055.elf
 Finished building: default.size.stdout
  
-Finished building: bno055.list
+Finished building: servo_bno055.list
  
-15:13:12 **** Incremental Build of configuration Debug for project bno055 ****
+17:38:25 **** Incremental Build of configuration Debug for project servo_bno055 ****
 make -j12 all 
-arm-none-eabi-gcc "../Core/Src/bno055_lib.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/bno055_lib.d" -MT"Core/Src/bno055_lib.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/bno055_lib.o"
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/bno055_lib.c: In function 'read_bno055_data':
-../Core/Src/bno055_lib.c:28:63: warning: passing argument 5 of 'HAL_I2C_Mem_Read' from incompatible pointer type [-Wincompatible-pointer-types]
-   28 |     HAL_I2C_Mem_Read(&hi2c1, BNO055_I2C_ADDR_LO << 1, reg, 1, &buffer, 6, 100);
-      |                                                               ^~~~~~~
-      |                                                               |
-      |                                                               uint8_t (*)[6] {aka unsigned char (*)[6]}
-In file included from ../Core/Inc/stm32f4xx_hal_conf.h:358,
-                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Inc/bno055_lib.h:3,
-                 from ../Core/Src/bno055_lib.c:1:
-../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h:571:133: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t (*)[6]' {aka 'unsigned char (*)[6]'}
-  571 | HAL_StatusTypeDef HAL_I2C_Mem_Read(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint16_t MemAddress, uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
-      |                                                                                                                            ~~~~~~~~~^~~~~
-arm-none-eabi-gcc -o "bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: bno055.elf
- 
-arm-none-eabi-size   bno055.elf 
-arm-none-eabi-objdump -h -S  bno055.elf  > "bno055.list"
+arm-none-eabi-size   servo_bno055.elf 
    text	   data	    bss	    dec	    hex	filename
-  23736	    120	   1784	  25640	   6428	bno055.elf
+  12652	     20	   1780	  14452	   3874	servo_bno055.elf
 Finished building: default.size.stdout
  
-Finished building: bno055.list
+17:42:00 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
+ 
+17:42:37 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
+ 
+17:43:07 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
+ 
+17:43:42 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12492	     20	   1708	  14220	   378c	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
+ 
+17:46:43 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:110:1: error: expected identifier or '(' before '}' token
+  110 | }
+      | ^
+make: *** [Core/Src/subdir.mk:43: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+17:47:24 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12472	     20	   1708	  14200	   3778	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
+ 
+17:47:50 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12472	     20	   1708	  14200	   3778	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
+ 
+17:48:21 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12468	     20	   1708	  14196	   3774	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
+ 
+17:49:00 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12484	     20	   1708	  14212	   3784	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
+ 
+17:49:45 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
+ 
+17:50:31 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12496	     20	   1708	  14224	   3790	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
+ 
+17:50:57 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12504	     20	   1708	  14232	   3798	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
+ 
+17:52:21 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-size   servo_bno055.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12504	     20	   1708	  14232	   3798	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+17:52:40 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32f446retx.d" -MT"Core/Startup/startup_stm32f446retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Startup/startup_stm32f446retx.o" "../Core/Startup/startup_stm32f446retx.s"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
+ 
+17:53:50 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12492	     20	   1708	  14220	   378c	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
+ 
+11:08:12 **** Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
+ 
+11:16:52 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-size   servo_bno055.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+11:18:58 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12540	     20	   1708	  14268	   37bc	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
+ 
+11:19:41 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
+ 
+11:21:06 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
+ 
+11:21:39 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
+ 
+11:23:53 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
+ 
+11:24:36 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
+ 
+11:32:56 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12484	     20	   1708	  14212	   3784	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
+ 
+11:33:17 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-size   servo_bno055.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12484	     20	   1708	  14212	   3784	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+11:33:49 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
+ 
+11:34:13 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
+ 
+11:40:34 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12492	     20	   1708	  14220	   378c	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
+ 
+11:42:30 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
+ 
+11:44:02 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-size   servo_bno055.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+11:45:05 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-size   servo_bno055.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+11:45:26 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-size   servo_bno055.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+11:46:52 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-size   servo_bno055.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+11:47:38 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-size   servo_bno055.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+11:54:40 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
+ 
+11:59:05 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-size   servo_bno055.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+12:00:53 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-size   servo_bno055.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+12:01:52 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
+ 
+12:16:03 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
+ 
+12:16:49 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
+ 
+12:17:17 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
+ 
+12:17:42 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
+ 
+12:18:23 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-size   servo_bno055.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+13:01:21 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
+ 
+13:02:15 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
+ 
+13:05:01 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
+ 
+13:05:34 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
+ 
+13:06:15 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
+ 
+13:06:44 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
+ 
+13:07:13 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-size   servo_bno055.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+13:08:04 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-size   servo_bno055.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+13:08:14 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-size   servo_bno055.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+13:10:36 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:103:6: warning: implicit declaration of function 'Hal_delay'; did you mean 'HAL_Delay'? [-Wimplicit-function-declaration]
+  103 |      Hal_delay(250);
+      |      ^~~~~~~~~
+      |      HAL_Delay
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.11.2\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.100.202210260954\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o: in function `main':
+C:/Users/BurakKAYAALP/Desktop/stm32_cube_ide/stm32_cube_ide/servo_bno055/Debug/../Core/Src/main.c:103: undefined reference to `Hal_delay'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: servo_bno055.elf] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+13:10:52 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:103:6: warning: implicit declaration of function 'HAL_delay'; did you mean 'HAL_Delay'? [-Wimplicit-function-declaration]
+  103 |      HAL_delay(250);
+      |      ^~~~~~~~~
+      |      HAL_Delay
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.11.2\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.100.202210260954\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o: in function `main':
+C:/Users/BurakKAYAALP/Desktop/stm32_cube_ide/stm32_cube_ide/servo_bno055/Debug/../Core/Src/main.c:103: undefined reference to `HAL_delay'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: servo_bno055.elf] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+13:11:01 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12504	     20	   1708	  14232	   3798	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
+ 
+13:24:20 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
+ 
+13:24:56 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-size   servo_bno055.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+13:27:11 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
+ 
+13:27:24 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-size   servo_bno055.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+13:28:00 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-size   servo_bno055.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12488	     20	   1708	  14216	   3788	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+13:30:04 **** Incremental Build of configuration Debug for project servo_bno055 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "servo_bno055.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\BurakKAYAALP\Desktop\stm32_cube_ide\stm32_cube_ide\servo_bno055\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="servo_bno055.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: servo_bno055.elf
+ 
+arm-none-eabi-size   servo_bno055.elf 
+arm-none-eabi-objdump -h -S  servo_bno055.elf  > "servo_bno055.list"
+   text	   data	    bss	    dec	    hex	filename
+  12524	     20	   1708	  14252	   37ac	servo_bno055.elf
+Finished building: default.size.stdout
+ 
+Finished building: servo_bno055.list
  
